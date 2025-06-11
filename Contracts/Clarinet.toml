@@ -7,6 +7,11 @@ cache_dir = '.\.cache'
 requirements = []
 [contracts.proposal-registry]
 path = 'contracts/proposal-registry.clar'
+[contracts.treasury]
+path = 'contracts/treasury.clar'
+[contracts.voting]
+path = 'contracts/voting.clar'
+
 clarity_version = 2
 epoch = 2.5
 [repl.analysis]
