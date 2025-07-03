@@ -1,0 +1,32 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: proposal-registry-minimal
+            expected-sender: ST18ZHM9H0QXKXEJ7MHV7YASTG4ADDM0J7AZDZX1
+            cost: 13750
+            path: "contracts\\proposal-registry-minimal.clar"
+            anchor-block-only: true
+            clarity-version: 1
+        - contract-publish:
+            contract-name: treasury-minimal
+            expected-sender: ST18ZHM9H0QXKXEJ7MHV7YASTG4ADDM0J7AZDZX1
+            cost: 8880
+            path: "contracts\\treasury-minimal.clar"
+            anchor-block-only: true
+            clarity-version: 1
+        - contract-publish:
+            contract-name: voting-minimal
+            expected-sender: ST18ZHM9H0QXKXEJ7MHV7YASTG4ADDM0J7AZDZX1
+            cost: 12330
+            path: "contracts\\voting-minimal.clar"
+            anchor-block-only: true
+            clarity-version: 1
+      epoch: "2.05"

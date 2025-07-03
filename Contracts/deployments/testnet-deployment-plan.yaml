@@ -1,0 +1,25 @@
+---
+id: 0
+name: StackFund DAO Deployment
+network: testnet
+stacks-node: "https://stacks-node-api.testnet.stacks.co"
+bitcoin-node: "bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: treasury
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            cost: 149430
+            path: contracts/treasury.clar
+        - contract-publish:
+            contract-name: voting  
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            cost: 168930
+            path: contracts/voting.clar
+        - contract-publish:
+            contract-name: proposal-registry
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            cost: 234560
+            path: contracts/proposal-registry.clar
